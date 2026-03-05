@@ -1,0 +1,263 @@
+/* --- TEMEL AYARLAR (Temizlendi) --- */
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Quicksand', sans-serif; }
+
+        /* --- HEADER & NAV --- */
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .header a {
+            text-decoration: none;
+            color: inherit; /* Linkin varsayılan mavi renge dönmesini engeller, başlık rengini korur */
+        }
+        .header h1 { margin: 0; color: #333; }
+        .header p { margin: 10px 0 0; color: #666; }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* --- MODERN LAYOUT (FLEXBOX) --- */
+        .main-container {
+            display: flex;
+            flex-wrap: wrap; /* Mobilde alt alta geçmesini sağlar */
+            max-width: 95%;
+            margin: 20px auto;
+            padding: 0 15px;
+            gap: 30px;
+        }
+
+        /* Sol Kolon (Menü) */
+        .sidebar-column {
+            flex: 0 0 320px;
+            min-width: 300px;
+            border: 2px solid black;
+        }
+
+        /* Sağ Kolon (İçerik) */
+        .content-column {
+            flex: 1;
+            min-width: 300px;
+            border: 2px solid black;
+            
+        }
+
+        /* --- KART TASARIMI (Orijinal Görünüm İçin) --- */
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: .25rem;
+        }
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0,0,0,.03);
+            border-bottom: 1px solid rgba(0,0,0,.125);
+            text-align: center;
+        }
+        .card-body {
+            flex: 1 1 auto;
+            padding: 1.25rem;
+        }
+
+        /* --- ORİJİNAL TREE MENU CSS (DOKUNULMADI) --- */
+        .lk-tree-menu {
+            list-style: none;
+            padding: 0; /* Orijinalde tarayıcı varsayılanını sıfırlamak gerekebilir */
+            margin: 0;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .lk-tree-menu input {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        .lk-tree-menu input ~ ul {
+            display: none;
+            padding: 0px;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        .lk-tree-menu input:checked ~ ul {
+            display: block;
+        }
+
+        .lk-tree-menu input:checked ~ label.tree_label:before {
+            content: "–";
+        }
+
+        .lk-tree-menu input:checked ~ label.tree_label:after {
+            border-radius: 0 0.3em 0 0;
+            border-top: 1px solid #606060;
+            border-right: 1px solid #606060;
+            border-bottom: 0;
+            border-left: 0;
+            bottom: 0;
+            top: 0.5em;
+            height: auto;
+            margin: 5px 0px 0px 1px;
+        }
+
+        .lk-tree-menu > li:last-child:before {
+            display: none;
+        }
+
+        .lk-tree-menu li {
+            line-height: 1.2;
+            position: relative;
+            padding: 0 0 1em 1em;
+            list-style: none;
+        }
+
+        .lk-tree-menu li:last-child:before {
+            height: 1em;
+            bottom: auto;
+        }
+
+        .lk-tree-menu li:before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -0.5em;
+            display: block;
+            width: 0;
+            border-left: 1px solid #606060;
+            content: "";
+        }
+
+        .lk-tree-menu li:last-child {
+            padding-bottom: 0;
+        }
+
+        .lk-tree-menu li ul li {
+            padding: 0.5em 0 0 1em;
+        }
+
+        .lk-tree-menu label {
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+            border-radius: 3px;
+        }
+
+        .lk-tree-menu label.tree_label {
+            cursor: pointer;
+            margin: 0px;
+            width: 100%;
+            padding: 5px;
+        }
+
+        .lk-tree-menu label:hover {
+            color: white;
+            background: #000000;
+        }
+
+        .lk-tree-menu label.tree_label:before {
+            background: #000000;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            float: left;
+            margin: 0 1em 0 -2.3em;
+            width: 1em;
+            height: 1em;
+            border-radius: 1em;
+            content: "+";
+            text-align: center;
+            line-height: 0.9em;
+        }
+
+        .lk-tree-menu label.tree_label:after {
+            border-bottom: 0;
+        }
+
+        .lk-tree-menu .tree_label {
+            position: relative;
+            display: inline-block;
+            background: #fff;
+        }
+
+        .lk-tree-menu .tree_label:after {
+            position: absolute;
+            top: 0.5em;
+            left: -1.5em;
+            display: block;
+            height: 0.5em;
+            width: 1em;
+            border-bottom: 1px solid #606060;
+            border-left: 1px solid #606060;
+            border-radius: 0 0 0 0.3em;
+            content: "";
+        }
+
+        /* Link Stili (Ağaç içindeki linkler için) */
+        .lk-tree-menu a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- CODE BLOCK STİLİ (İyileştirilmiş) --- */
+        pre {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #333;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1.5em;
+            display: block;
+            word-wrap: break-word;
+            counter-reset: line;
+        }
+        
+        pre span {
+            display: block;
+            position: relative;
+        }
+        
+        pre span::before {
+            counter-increment: line;
+            content: counter(line);
+            display: inline-block;
+            border-right: 1px solid #ddd;
+            padding-right: 10px;
+            margin-right: 10px;
+            color: #888;
+            user-select: none;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar-column, .content-column {
+                width: 100%;
+                border: 1px solid black;
+            }
+        }

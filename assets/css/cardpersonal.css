@@ -1,0 +1,141 @@
+/* --- DİJİTAL KARTVİZİT CSS (Sayfa Beyaz, Kart Koyu Tema) --- */
+:root {
+    --primary-color: #0e76a8; 
+    --card-bg-start: #1a1a2e; /* Kartın koyu lacivert başlangıç rengi */
+    --card-bg-end: #16213e;   /* Kartın koyu lacivert bitiş rengi */
+    --text-primary: #ffffff;  /* Ana metin beyaz */
+    --text-secondary: #aeb4c6; /* Alt başlıklar açık gri */
+    --neon-glow: 0 0px 50px rgba(0, 93, 231, 0.3); /* Mavi neon parıltı */
+}
+
+
+/* Kapsayıcı (Arka planı şeffaf, kartı sayfada ortalamak için) */
+.business-card-wrapper {
+    font-family: 'Inter', sans-serif;
+    background: transparent !important; 
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* KARTIN KENDİSİ - Koyu Tema Sadece Buraya Uygulanıyor */
+.profile-card {
+    background: linear-gradient(135deg, var(--card-bg-start), var(--card-bg-end)); /* Koyu arka plan buraya taşındı! */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: var(--neon-glow); /* Neon mavi ışık eklendi */
+}
+
+.profile-img-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 34%;
+    border: 4px solid rgba(255, 255, 255, 0.2); /* Koyu zeminde belirgin çerçeve */
+    padding: 3px;
+    background-clip: content-box;
+}
+
+.status-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #28c76f;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #1a1a2e; /* Rozet çerçevesi kartla aynı renk */
+}
+
+.card-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    color: var(--text-primary); /* Beyaz metin */
+}
+
+.business-card-wrapper .title {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.business-card-wrapper .bio {
+    color: #d1d5db; /* Açık gri bio yazısı */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1); /* Koyu zemin üzerine yarı saydam buton */
+    color: #fff !important; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-btn:hover {
+    background: var(--primary-color);
+    color: #ffffff !important;
+    transform: scale(1.1);
+}
+
+/* Bana Ulaşın Butonu (Beyaz buton, koyu yazı) */
+.btn-contact {
+    background: #ffffff; 
+    color: #1a1a2e;      
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    width: 100%;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-contact:hover {
+    background: #e2e2e2;
+    color: #1a1a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+}
+
+.card-footer-text {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+

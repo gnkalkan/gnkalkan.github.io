@@ -1,0 +1,37 @@
+.calculator-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 450px;
+    margin: 0 auto;
+}
+.result-box {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}       
+/* Input yüksekliklerini biraz daraltalım */
+.form-control-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Select kutularında ok işaretine sağdan yer ayır ve taşmaları 3 nokta ile gizle */
+.form-select-sm {
+    padding: 0.4rem 2.2rem 0.4rem 0.8rem; /* Sağ boşluğu (2.2rem) artırdık */
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+}
+
+/* Kartın maksimum genişliğini sınırla */
+.calculator-card {
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+/* Sonuç kutusundaki yazı fontlarını küçültelim ve uzun sayıların taşmasını engelleyelim */
+.result-box span {
+    font-size: 0.85rem;
+    word-break: break-all; 
+}
