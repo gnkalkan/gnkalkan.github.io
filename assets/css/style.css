@@ -259,5 +259,7 @@
             .sidebar-column, .content-column {
                 width: 100%;
                 border: 1px solid black;
+                flex-basis: auto;
             }
+
         }
