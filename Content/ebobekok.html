@@ -1,0 +1,45 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">EBOB / EKOK Hesaplama</h3>
+            
+            <form id="ebobEkokForm" class="d-flex flex-column align-items-center"> 
+                
+                <div class="mb-3 w-75">
+                    <label for="num1" class="form-label fw-bold small">1. Sayı</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="num1" placeholder="Örn: 12" required>
+                </div>
+
+                <div class="mb-4 w-75">
+                    <label for="num2" class="form-label fw-bold small">2. Sayı</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="num2" placeholder="Örn: 18" required>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculateEbobEkok()">HESAPLA</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Sayılar</small>
+                        <span class="fw-bold text-dark small" id="resNumbers">-</span>
+                    </div>
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">EBOB</small>
+                        <span class="fw-bold text-success small" id="resEbob">0</span>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">EKOK</small>
+                        <span class="fw-bold text-primary small" id="resEkok">0</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

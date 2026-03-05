@@ -1,0 +1,60 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">KDV Hesaplama</h3>
+            
+            <form id="kdvForm" class="d-flex flex-column align-items-center"> 
+                <div class="mb-3 w-75">
+                    <label for="amount" class="form-label fw-bold small">Tutar Giriniz (₺)</label>
+                    <input type="number" inputmode="decimal" class="form-control form-control-sm" id="amount" placeholder="Örn: 1000" step="0.01" required>
+                </div>
+
+                <div class="mb-3 w-75">
+                    <label for="taxRate" class="form-label fw-bold small">KDV Oranı</label>
+                    <select class="form-select form-select-sm" id="taxRate">
+                        <option value="20" selected>%20 (Genel)</option>
+                        <option value="10">%10 (Gıda, Tekstil vb.)</option>
+                        <option value="1">%1 (Temel Gıda vb.)</option>
+                        <option value="0">%0 (İstisna)</option>
+                    </select>
+                </div>
+
+                <div class="mb-4 text-center">
+                    <label class="form-label fw-bold d-block small">Hesaplama Yöntemi</label>
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="calcType" id="typeExclusive" value="exclusive" checked autocomplete="off">
+                        <label class="btn-outline-dark btn" for="typeExclusive">KDV Hariç</label>
+
+                        <input type="radio" class="btn-check" name="calcType" id="typeInclusive" value="inclusive" autocomplete="off">
+                        <label class="btn-outline-dark btn" for="typeInclusive">KDV Dahil</label>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculateKDV()">HESAPLA</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">KDV'siz</small>
+                        <span class="fw-bold text-dark small" id="resBase">0.00 ₺</span>
+                    </div>
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">KDV</small>
+                        <span class="fw-bold text-danger small" id="resTax">0.00 ₺</span>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Toplam</small>
+                        <span class="fw-bold text-success small" id="resTotal">0.00 ₺</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

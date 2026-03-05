@@ -1,0 +1,66 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">Şifre & Hash Oluşturucu</h3>
+            
+            <form id="sifreForm" class="d-flex flex-column align-items-center"> 
+                
+                <div class="mb-3 w-100 text-center">
+                    <div class="btn-group btn-group-sm w-75" role="group">
+                        <input type="radio" class="btn-check" name="inputType" id="typeRandom" value="random" checked onchange="toggleInputFields()">
+                        <label class="btn-outline-dark btn" for="typeRandom">Rastgele Üret</label>
+
+                        <input type="radio" class="btn-check" name="inputType" id="typeCustom" value="custom" onchange="toggleInputFields()">
+                        <label class="btn-outline-dark btn" for="typeCustom">Metin Şifrele</label>
+                    </div>
+                </div>
+
+                <div class="mb-3 w-75" id="lengthDiv">
+                    <label for="pwdLength" class="form-label fw-bold small">Şifre Uzunluğu</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="pwdLength" value="12" min="4" max="64" required>
+                    <div class="form-text" style="font-size: 0.7rem;">Önerilen: 12 - 16 arası</div>
+                </div>
+
+                <div class="mb-3 w-75 d-none" id="customTextDiv">
+                    <label for="customText" class="form-label fw-bold small">Şifrelenecek Metin</label>
+                    <input type="text" class="form-control form-control-sm" id="customText" placeholder="Gizli metninizi girin...">
+                </div>
+
+                <div class="mb-4 w-75">
+                    <label for="cryptoAlgo" class="form-label fw-bold small">Şifreleme Algoritması</label>
+                    <select class="form-select form-select-sm" id="cryptoAlgo">
+                        <option value="sha256" selected>SHA-256 (Güvenli Hash)</option>
+                        <option value="base64">Base64 (Metin Kodlama)</option>
+                        <option value="hex">Hexadecimal (Onaltılık)</option>
+                        <option value="rot13">Sezar Şifrelemesi (ROT13)</option>
+                    </select>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculatePassword()">ŞİFRELE</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end pe-1">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Düz Metin</small>
+                        <span class="fw-bold text-dark" id="resPlain">-</span>
+                    </div>
+                    <div class="col-4 border-end px-1">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Algoritma</small>
+                        <span class="fw-bold text-info" id="resAlgoName">-</span>
+                    </div>
+                    <div class="col-4 ps-1">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Şifreli Hali</small>
+                        <span class="fw-bold text-danger" id="resCipher">-</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

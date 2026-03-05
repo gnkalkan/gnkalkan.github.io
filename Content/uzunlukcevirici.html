@@ -1,0 +1,71 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">Uzunluk Çevirici</h3>
+            
+            <form id="uzunlukForm" class="d-flex flex-column align-items-center"> 
+                
+                <div class="mb-3 w-75">
+                    <label for="lengthAmount" class="form-label fw-bold small">Miktar</label>
+                    <input type="number" inputmode="decimal" class="form-control form-control-sm" id="lengthAmount" placeholder="Örn: 100" step="0.01" required>
+                </div>
+
+                <div class="row w-100 mb-4 px-0">
+                    <div class="col-6 pe-1">
+                        <label for="fromLength" class="form-label fw-bold small">Mevcut Birim</label>
+                        <select class="form-select form-select-sm" id="fromLength">
+                            <option value="mm">Milimetre (mm)</option>
+                            <option value="cm">Santimetre (cm)</option>
+                            <option value="m" selected>Metre (m)</option>
+                            <option value="km">Kilometre (km)</option>
+                            <option value="in">İnç (in)</option>
+                            <option value="ft">Ayak (ft)</option>
+                            <option value="yd">Yarda (yd)</option>
+                            <option value="mi">Mil (mi)</option>
+                            <option value="nmi">Deniz Mili (nmi)</option>
+                        </select>
+                    </div>
+                    <div class="col-6 ps-1">
+                        <label for="toLength" class="form-label fw-bold small">Hedef Birim</label>
+                        <select class="form-select form-select-sm" id="toLength">
+                            <option value="mm">Milimetre (mm)</option>
+                            <option value="cm" selected>Santimetre (cm)</option>
+                            <option value="m">Metre (m)</option>
+                            <option value="km">Kilometre (km)</option>
+                            <option value="in">İnç (in)</option>
+                            <option value="ft">Ayak (ft)</option>
+                            <option value="yd">Yarda (yd)</option>
+                            <option value="mi">Mil (mi)</option>
+                            <option value="nmi">Deniz Mili (nmi)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculateLengthConvert()">ÇEVİR</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end pe-1">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Girilen</small>
+                        <span class="fw-bold text-dark" id="resInput">-</span>
+                    </div>
+                    <div class="col-4 border-end px-1">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Hedef</small>
+                        <span class="fw-bold text-info" id="resTargetUnit">-</span>
+                    </div>
+                    <div class="col-4 ps-1">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Sonuç</small>
+                        <span class="fw-bold text-success" id="resOutput">-</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

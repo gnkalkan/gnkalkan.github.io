@@ -1,0 +1,48 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">Günlük Su İhtiyacı</h3>
+            
+            <form id="suForm" class="d-flex flex-column align-items-center"> 
+                <div class="mb-3 w-75">
+                    <label for="weightKg" class="form-label fw-bold small">Kilonuz (kg)</label>
+                    <input type="number" inputmode="decimal" class="form-control form-control-sm" id="weightKg" placeholder="Örn: 70" step="0.1" required>
+                </div>
+
+                <div class="mb-4 w-75">
+                    <label for="activityLevel" class="form-label fw-bold small">Hareket Seviyeniz</label>
+                    <select class="form-select form-select-sm" id="activityLevel">
+                        <option value="30">Az Hareketli (Masa başı vb.)</option>
+                        <option value="35" selected>Orta Hareketli (Hafif yürüyüş vb.)</option>
+                        <option value="40">Çok Hareketli (Düzenli spor vb.)</option>
+                    </select>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculateWater()">HESAPLA</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Kilonuz</small>
+                        <span class="fw-bold text-dark small" id="resWeight">0 kg</span>
+                    </div>
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Günlük İhtiyaç</small>
+                        <span class="fw-bold text-primary small" id="resWater">0.00 L</span>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Ortalama</small>
+                        <span class="fw-bold text-info small" id="resGlasses">0 Bardak</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

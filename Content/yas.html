@@ -1,0 +1,40 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">Yaş Hesaplama</h3>
+            
+            <form id="yasForm" class="d-flex flex-column align-items-center"> 
+                
+                <div class="mb-4 w-75">
+                    <label for="birthDate" class="form-label fw-bold small">Doğum Tarihiniz</label>
+                    <input type="date" class="form-control form-control-sm" id="birthDate" required>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculateAge()">HESAPLA</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Tam Yıl</small>
+                        <span class="fw-bold text-dark small" id="resYears">0 Yıl</span>
+                    </div>
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Artan Ay</small>
+                        <span class="fw-bold text-info small" id="resMonths">0 Ay</span>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Artan Gün</small>
+                        <span class="fw-bold text-primary small" id="resDays">0 Gün</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

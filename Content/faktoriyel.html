@@ -1,0 +1,40 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">Faktöriyel Hesaplama</h3>
+            
+            <form id="faktoriyelForm" class="d-flex flex-column align-items-center"> 
+                
+                <div class="mb-4 w-75">
+                    <label for="numInput" class="form-label fw-bold small">Bir Sayı Giriniz (n)</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="numInput" placeholder="Örn: 5" min="0" required>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculateFaktoriyel()">HESAPLA</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Sayı</small>
+                        <span class="fw-bold text-dark small" id="resNumber">-</span>
+                    </div>
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Gösterim</small>
+                        <span class="fw-bold text-info small" id="resNotation">-</span>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Sonuç</small>
+                        <span class="fw-bold text-success small" id="resFactorial">0</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

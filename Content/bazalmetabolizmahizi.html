@@ -1,0 +1,61 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">Bazal Metabolizma Hızı (BMH)</h3>
+            
+            <form id="bmhForm" class="d-flex flex-column align-items-center"> 
+                
+                <div class="mb-3 text-center w-75">
+                    <label class="form-label fw-bold d-block small">Cinsiyet</label>
+                    <div class="btn-group btn-group-sm w-100" role="group">
+                        <input type="radio" class="btn-check" name="gender" id="genderMale" value="male" checked autocomplete="off">
+                        <label class="btn-outline-dark btn" for="genderMale">Erkek</label>
+
+                        <input type="radio" class="btn-check" name="gender" id="genderFemale" value="female" autocomplete="off">
+                        <label class="btn-outline-dark btn" for="genderFemale">Kadın</label>
+                    </div>
+                </div>
+
+                <div class="mb-3 w-75">
+                    <label for="age" class="form-label fw-bold small">Yaşınız</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="age" placeholder="Örn: 30" required>
+                </div>
+
+                <div class="mb-3 w-75">
+                    <label for="heightCm" class="form-label fw-bold small">Boyunuz (cm)</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="heightCm" placeholder="Örn: 175" required>
+                </div>
+
+                <div class="mb-4 w-75">
+                    <label for="weightKg" class="form-label fw-bold small">Kilonuz (kg)</label>
+                    <input type="number" inputmode="decimal" class="form-control form-control-sm" id="weightKg" placeholder="Örn: 70" step="0.1" required>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculateBMH()">HESAPLA</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Profil</small>
+                        <span class="fw-bold text-dark small" id="resProfile">-</span>
+                    </div>
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Cinsiyet</small>
+                        <span class="fw-bold text-info small" id="resGender">-</span>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Günlük BMH</small>
+                        <span class="fw-bold text-danger small" id="resBmh">0 kcal</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

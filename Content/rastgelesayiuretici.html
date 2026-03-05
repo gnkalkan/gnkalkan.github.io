@@ -1,0 +1,51 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">Rastgele Sayı Üretici</h3>
+            
+            <form id="rastgeleForm" class="d-flex flex-column align-items-center"> 
+                
+                <div class="mb-3 w-75">
+                    <label for="minNum" class="form-label fw-bold small">Alt Sınır</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="minNum" value="1" required>
+                </div>
+
+                <div class="mb-3 w-75">
+                    <label for="maxNum" class="form-label fw-bold small">Üst Sınır</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="maxNum" value="100" required>
+                </div>
+
+                <div class="mb-4 w-75">
+                    <label for="numCount" class="form-label fw-bold small">Üretilecek Sayı Adedi</label>
+                    <input type="number" inputmode="numeric" class="form-control form-control-sm" id="numCount" value="1" min="1" max="50" required>
+                    <div class="form-text" style="font-size: 0.7rem;">Maksimum 50 adet üretebilirsiniz.</div>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="generateRandom()">ÜRET</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Aralık</small>
+                        <span class="fw-bold text-dark small" id="resRange">-</span>
+                    </div>
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Adet</small>
+                        <span class="fw-bold text-info small" id="resCount">0</span>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Sonuçlar</small>
+                        <span class="fw-bold text-primary small" id="resResult">-</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

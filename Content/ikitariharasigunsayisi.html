@@ -1,0 +1,45 @@
+
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6"> 
+        <div class="card calculator-card p-4">
+            <h3 class="text-center mb-4 text-dark">Tarih Farkı Hesaplama</h3>
+            
+            <form id="tarihFarkForm" class="d-flex flex-column align-items-center"> 
+                
+                <div class="mb-3 w-75">
+                    <label for="startDate" class="form-label fw-bold small">Başlangıç Tarihi</label>
+                    <input type="date" class="form-control form-control-sm" id="startDate" required>
+                </div>
+
+                <div class="mb-4 w-75">
+                    <label for="endDate" class="form-label fw-bold small">Bitiş Tarihi</label>
+                    <input type="date" class="form-control form-control-sm" id="endDate" required>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-dark px-4 btn-sm fw-bold" onclick="calculateDateDifference()">HESAPLA</button>
+                    <button type="button" class="btn btn-outline-secondary px-3 btn-sm" onclick="resetForm()">Temizle</button>
+                </div>
+            </form>
+
+            <div id="resultBox" class="result d-none result-box text-center mt-4">
+                <div class="row g-0">
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">1. Tarih</small>
+                        <span class="fw-bold text-dark small" id="resStart">-</span>
+                    </div>
+                    <div class="col-4 border-end">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">2. Tarih</small>
+                        <span class="fw-bold text-info small" id="resEnd">-</span>
+                    </div>
+                    <div class="col-4">
+                        <small class="text-muted d-block" style="font-size: 0.7rem;">Toplam Süre</small>
+                        <span class="fw-bold text-primary small" id="resDiff">0 Gün</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
