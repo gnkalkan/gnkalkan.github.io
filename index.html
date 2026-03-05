@@ -257,15 +257,22 @@
                 });
             });
             // Sayfa yüklendiğinde otomatik olarak cardpersonal sayfasını aç
-            loadPage('cardpersonal');
+            if (typeof loadPage === 'function') {
+                loadPage('cardpersonal');
+            }
         });
 
         // 3. Pencere boyutu her değiştiğinde (masaüstünden mobile çekildiğinde) otomatik çalıştır
         window.addEventListener('resize', function() {
+            const isNowMobile = window.innerWidth <= 768;
+            if (isCurrentlyMobile !== isNowMobile) {
             handleMenuResponsive();
+            isCurrentlyMobile = isNowMobile; // Yeni durumu güncelle
+            }
         });
 
 
     </script>
 </body>
+
 </html>
