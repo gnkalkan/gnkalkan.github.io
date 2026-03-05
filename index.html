@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kişisel Blog - NesimiGurkanKalkan</title>
+    
+    <link href="./assets/img/favicon.ico" type="image/x-icon" rel="icon">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet"> -->
+    <link href="./assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/calculate.css" rel="stylesheet">
+    <link href="./assets/css/cardpersonal.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="header">
+        <a href="javascript:void(0)" onclick="loadPage('cardpersonal')"><h1>Hesaplama</h1></a>
+        <p>Gürkan Nesimi Kalkan</p>
+    </div>
+
+    <div class="topnav" style="display: flex; justify-content: center; align-items: center;">
+        <span style="color:white;">LABS</span>
+    </div>
+
+
+    
+
+
+
+    <div class="main-container">
+        <div class="sidebar-column">
+             <div class="card">
+                <div class="card-header text-center">
+                    <h2>Menu</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="lk-tree-menu">
+                        <li>
+                            <input type="checkbox" checked="checked" id="bgHeader-1" />
+                            <label class="tree_label" for="bgHeader-1">Menu</label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" checked="checked" id="mdHeader-1" />
+                                    <label class="tree_label" for="mdHeader-1">Hesaplamalar</label>
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-1" />
+                                            <label class="tree_label" for="smHeader-1">Finansal Hesaplamalar</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('kdv')">KDV Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('iskonto')">İskonto Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('basitkredi')">Basit Kredi Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('mevduatfaizi')">Mevduat Faizi Getirisi</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('karzarar')">Kar/Zarar Hesaplama</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-2" />
+                                            <label class="tree_label" for="smHeader-2">Sağlık ve Spor Hesaplamaları</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('vucutkitleindeksi')">Vücut Kitle İndeksi</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('gunluksuihtiyaci')">Günlük Su İhtiyacı</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('bazalmetabolizmahizi')">Bazal Metabolizma Hızı</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('belkalcaorani')">Bel/Kalça Oranı</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('idealkilo')">İdeal Kilo Hesaplama</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-3" />
+                                            <label class="tree_label" for="smHeader-3">Günlük Yaşam ve Pratik Araçlar</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('yakittuketimi')">Yakıt Tüketimi Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('bahsis')">Bahşiş Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('sifreolusturucu')">Şifre Oluşturucu</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-4" />
+                                            <label class="tree_label" for="smHeader-4">Matematiksel Araçlar</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('yuzde')">Yüzde Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('alancevre')">Alan ve Çevre Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('ebobekok')">EBOB / EKOK Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('faktoriyel')">Faktöriyel Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('rastgelesayiuretici')">Rastgele Sayı Üretici</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-5" />
+                                            <label class="tree_label" for="smHeader-5">Zaman ve Tarih Hesaplamaları</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('yas')">Yaş Hesaplama</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('ikitariharasigunsayisi')">İki Tarih Arası Gün Sayısı</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('hangigundogdun')">Hangi Gün Doğdun</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('safaksayar')">Şafak/Geri Sayar</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('burcbulma')">Burç Bulma</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('yukselenburc')">Yükselen Burç</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-6" />
+                                            <label class="tree_label" for="smHeader-6">Birim Çeviriciler</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('veriboyutucevirici')">Veri Boyutu Çevirici</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('agirlikcevirici')">Ağırlık Çevirici</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('uzunlukcevirici')">Uzunluk Çevirici</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label"><a href="javascript:void(0)" onclick="loadPage('sicaklikcevirici')">Sıcaklık Çevirici</a></span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <!-- <li>
+                                    <input type="checkbox" checked="checked" id="mdHeader-2" />
+                                    <label class="tree_label" for="mdHeader-2">Diğer</label>
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-3" />
+                                            <label class="tree_label" for="smHeader-3">Farklar</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label">Youtube Spotify Tidal Arasındaki Ses Farkı</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-3" />
+                                            <label class="tree_label" for="smHeader-3">Php</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label">Ornek1</span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label">ornek2</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" checked="checked" id="smHeader-4" />
+                                            <label class="tree_label" for="smHeader-4">Database</label>
+                                            <ul>
+                                                <li>
+                                                    <span class="tree_label">My SQL</span>
+                                                </li>
+                                                <li>
+                                                    <span class="tree_label">No SQL</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-column pt-4" id="content-area">
+            
+        </div>
+    </div>
+
+
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/calculates.js"></script>
+
+    <script>
+        function handleMenuResponsive() {
+            // Ekran genişliğini kontrol et (768px altı mobil kabul edilir)
+            const isMobile = window.innerWidth <= 768;
+            const menuCheckboxes = document.querySelectorAll('.lk-tree-menu input[type="checkbox"]');
+
+            menuCheckboxes.forEach(function(checkbox) {
+                // Eğer mobildeysek checkbox'ları kaldır (menü kapansın)
+                // Eğer masaüstündeysek checkbox'ları işaretle (menü açılsın)
+                checkbox.checked = !isMobile;
+            });
+        }
+
+        // 1. Sayfa ilk yüklendiğinde çalıştır
+        document.addEventListener("DOMContentLoaded", function() {
+            handleMenuResponsive();
+
+            // 2. Menüdeki herhangi bir linke (a tagine) tıklandığında menüyü kapat
+            const menuLinks = document.querySelectorAll('.lk-tree-menu a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        const allCheckboxes = document.querySelectorAll('.lk-tree-menu input[type="checkbox"]');
+                        allCheckboxes.forEach(cb => cb.checked = false);
+                    }
+                });
+            });
+            // Sayfa yüklendiğinde otomatik olarak cardpersonal sayfasını aç
+            loadPage('cardpersonal');
+        });
+
+        // 3. Pencere boyutu her değiştiğinde (masaüstünden mobile çekildiğinde) otomatik çalıştır
+        window.addEventListener('resize', function() {
+            handleMenuResponsive();
+        });
+
+
+    </script>
+</body>
+</html>
